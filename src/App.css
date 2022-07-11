@@ -1,4 +1,54 @@
-.App .Searchbar {
+body {
+  background-color: red;
+}
+
+.App {
   display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.App .Searchbar {
+  position: relative;
+  height: 20%;
+  background-color: midnightblue;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App .Searchbar input {
+  height: 25px;
+  width: 300px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  font-size: 18px; 
+}
+
+.App .Searchbar .trazi{
+  height: 31px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 18px; 
+}
+
+.App .Searchbar .listazelja {
+  border-radius: 10px;
+  height: 31px;
+  font-size: 18px; 
+  position: absolute;
+  right: 15px;
+}
+
+.movieList {
+  flex: 70%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
