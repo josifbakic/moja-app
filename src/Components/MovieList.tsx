@@ -12,14 +12,14 @@ const MovieList = ({film, dodaj, dugmePoruka}: Props) => {
         <div className="stavka">
             <div className='title'>
                 <span>{film.Title+" ("+film.Year+")"}</span>
+                <br></br>
+                <span className='tip'>{film.Type}</span>
             </div>
             <img src={film.Poster} alt={film.Title} />
-            <div className="tip">
-                <span>
-                    {film.Type}
-                </span>
+            <div>
                 <button onClick={()=>{dodaj(film)}}>{dugmePoruka(film)}</button>
             </div>
+            <br></br>
             <br></br>
         </div>
     )
