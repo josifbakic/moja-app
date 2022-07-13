@@ -15,19 +15,23 @@ function App() {
   const trazi = ():void => {
     fetch(`http://www.omdbapi.com/?s=${ime}&apikey=e7ee4081`)
     .then((res)=>res.json())
-    .then((res: Api) => setFilmovi(res.Search))
+    .then((res: Api) => setFilmovi(res.Search));
   }
 
   const dodaj = (filmZaDodati: Film):void => {
-    omiljeni.some(x=>x===filmZaDodati) ? setOmiljeni(omiljeni.filter(x=>x!==filmZaDodati)) : setOmiljeni([...omiljeni, filmZaDodati]);
+    if (omiljeni.some(x=>x==filmZaDodati)){
+      setOmiljeni(omiljeni.filter(x=>x!=filmZaDodati));
+    }
+    else setOmiljeni([...omiljeni, filmZaDodati]);
   }
 
-  const prikaziZelje = ():void => {
+  const prikaziZelje = ():void =>{
     setFilmovi(omiljeni);
   }
 
   const dugmePoruka = (film: Film): string => {
-    return (omiljeni.some(x=>x===film) ? "Ukloni sa liste želja" : "Dodaj na listu želja");
+    if (omiljeni.some(x=>x==film)) return "Ukloni sa liste želja"
+    else return "Dodaj na listu želja";
   }
 
   return (
