@@ -20,7 +20,6 @@ export const SearchbarComponent = ({
   return (
     <div className="Searchbar">
       <input
-        id="srcbar"
         type="text"
         placeholder="Ukucajte ime željenog filma ovde..."
         value={searchCriteria}

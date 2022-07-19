@@ -4,6 +4,7 @@ import { SearchbarComponent } from "./Components/Searchbar";
 import { useSearchParams } from "react-router-dom";
 import { MovieComponent } from "./Components/Movie";
 import { Data, Film } from "./api";
+import './App.css'
 
 const App = () => {
   const [searchParams] = useSearchParams();
@@ -55,14 +56,14 @@ const App = () => {
         updateFavorites={azurirajOmiljene}
       />
       <Routes>
-        <Route path="/" element={<div>Landing page</div>} />
+        <Route path="/" element={<div className="landingPage">Dobrodošli na JMDB!</div>} />
         <Route
           path="/pretraga"
-          element={filmovi.length===0 ? <div>Nema rezultata za datu pretragu...</div> : <MovieComponent filmovi={filmovi} dodaj={dodaj} dugmePoruka={dugmePoruka}/>}
+          element={filmovi.length===0 ? <div className="greskaPretraga">Ups! Nema rezultata za datu pretragu...</div> : <MovieComponent filmovi={filmovi} dodaj={dodaj} dugmePoruka={dugmePoruka}/>}
         />
         <Route
           path="/favorites"
-          element={omiljeni.length===0 ? <div>Trenutno nema filmova na listi želja...</div> : <MovieComponent filmovi={omiljeni} dodaj={dodaj} dugmePoruka={dugmePoruka}/>}
+          element={omiljeni.length===0 ? <div className="praznaListaZelja">Trenutno nema filmova na listi želja...</div> : <MovieComponent filmovi={omiljeni} dodaj={dodaj} dugmePoruka={dugmePoruka}/>}
         />
       </Routes>
     </>

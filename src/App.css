@@ -11,7 +11,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.App .Searchbar {
+.Searchbar {
   position: relative;
   height: 20%;
   background-color: midnightblue;
@@ -20,35 +20,94 @@ body {
   justify-content: center;
   align-items: center;
 }
-
-.App .Searchbar input {
-  height: 25px;
+.Searchbar input {
+  height: 29px;
   width: 300px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   font-size: 18px; 
+  border: none;
 }
 
-.App .Searchbar .trazi{
+.Searchbar .trazi{
   height: 31px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   font-size: 18px; 
+  border: none;
 }
 
-.App .Searchbar .listazelja {
+.Searchbar .listazelja {
   border-radius: 10px;
   height: 31px;
   font-size: 18px; 
   position: absolute;
   right: 15px;
+  border: none;
 }
 
-.movieList {
+ 
+.stavka {
   flex: 70%;
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
+  text-align: center;
 }
 
+.stavka button {
+  height: 21px;
+  font-size: 14px;
+  border-radius: 7px;
+  border: none;
+  background-color: darkgoldenrod;
+  color: white;
+}
+
+.stavka .title {
+  font-size: 18px;
+  color: whitesmoke;
+}
+
+.stavka .type {
+  font-size: 16px;
+  font-style: italic;
+  color: whitesmoke;
+}
+
+.landingPage {
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  position: absolute;
+  top: 40%;
+  left: 23%;
+  font-size: 80px;
+}
+
+.greskaPretraga {
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  font-size: 40px;
+}
+
+.praznaListaZelja {
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  position: absolute;
+  top: 20%;
+  left: 26%;
+  font-size: 40px;
+}

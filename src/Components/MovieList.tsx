@@ -10,10 +10,10 @@ interface Props{
 const MovieList = ({film, dodaj, dugmePoruka}: Props) => {
     return (
         <div className="stavka">
-            <div className='title'>
-                <span>{film.Title+" ("+film.Year+")"}</span>
+            <div>
+                <span className="title">{film.Title+" ("+film.Year+")"}</span>
                 <br></br>
-                <span>{film.Type}</span>
+                <span className="type">{film.Type}</span>
             </div>
             <img src={film.Poster} alt={film.Title} />
             <div>
