@@ -37,7 +37,7 @@ const App = () => {
       setOmiljeni(newData);
       localStorage.setItem("omiljeni", JSON.stringify(newData));
     } else {
-      const newData = [...omiljeni, filmZaDodati]
+      const newData = [filmZaDodati, ...omiljeni]
       localStorage.setItem("omiljeni", JSON.stringify(newData));
       setOmiljeni(newData)
     };
